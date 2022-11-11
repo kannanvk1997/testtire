@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<meta charset="utf-8" />
+	<title>Tire</title>
+	<script async="" src="js/v0.js"></script>
+	<script async="" custom-element="amp-sidebar" src="js/v0/amp-sidebar-0.1.js"></script>
+	<link rel="canonical" href="index.html" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
+	<meta name="viewport"
+		content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<style amp-custom="">
+		@font-face {
+			font-family: 'fontello';
+			src: url('font/fontellod176.eot?34912776');
+			src: url('font/fontellod176.eot?34912776#iefix') format('embedded-opentype'),
+				url('font/fontellod176.woff?34912776') format('woff'),
+				url('font/fontellod176.ttf?34912776') format('truetype'),
+				url('font/fontellod176.svg?34912776#fontello') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		[class^="icon-"]:before,
+		[class*=" icon-"]:before {
+			font-family: "fontello";
+			font-style: normal;
+			font-weight: normal;
+			speak: none;
+			display: inline-block;
+			text-decoration: inherit;
+			width: 1em;
+			margin-right: .2em;
+			text-align: center;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1em;
+			margin-left: .2em;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		html,
+		body {
+			min-height: 100vh;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: large;
+			background-color: #ececec;
+			display: flex;
+			flex-direction: column;
+		}
+
+		img {
+			border: 0;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0;
+			padding: 0;
+			line-height: 150%;
+		}
+
+		h1 {
+			font-size: 1.5em;
+		}
+
+		h2 {
+			font-size: 1.1em;
+		}
+
+		h3 {
+			font-size: 1em;
+		}
+
+		h4 {
+			font-size: 0.9em;
+			font-weight: normal;
+		}
+
+		h5 {
+			font-size: 0.8em;
+			font-weight: normal;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		h2.model a,
+		h2.model a:visited {
+			color: #000;
+		}
+
+		h2.model a:hover {
+			text-decoration: none;
+		}
+
+		.mt-1 {
+			margin-top: 0.2rem;
+		}
+
+		.mt-2 {
+			margin-top: 0.5rem;
+		}
+
+		.mt-3 {
+			margin-top: 0.8rem;
+		}
+
+		.mt-4 {
+			margin-top: 1.2rem;
+		}
+
+		.mt-5 {
+			margin-top: 2.0rem;
+		}
+
+		.mb-1 {
+			margin-bottom: 0.2rem;
+		}
+
+		.mb-2 {
+			margin-bottom: 0.5rem;
+		}
+
+		.mb-3 {
+			margin-bottom: 0.8rem;
+		}
+
+		.mb-4 {
+			margin-bottom: 1.2rem;
+		}
+
+		.mb-5 {
+			margin-bottom: 2.0rem;
+		}
+
+		.ml-1 {
+			margin-left: 0.2rem;
+		}
+
+		.ml-2 {
+			margin-left: 0.4rem;
+		}
+
+		.ml-3 {
+			margin-left: 0.8rem;
+		}
+
+		.ml-4 {
+			margin-left: 1.4rem;
+		}
+
+		.ml-5 {
+			margin-left: 2.0rem;
+		}
+
+		.mr-1 {
+			margin-right: 0.2rem;
+		}
+
+		.mr-2 {
+			margin-right: 0.4rem;
+		}
+
+		.mr-3 {
+			margin-right: 0.8rem;
+		}
+
+		.mr-4 {
+			margin-right: 1.4rem;
+		}
+
+		.mr-5 {
+			margin-right: 2.0rem;
+		}
+
+		.pl-1 {
+			padding-left: 0.2rem;
+		}
+
+		.pl-2 {
+			padding-left: 0.4rem;
+		}
+
+		.pl-3 {
+			padding-left: 0.8rem;
+		}
+
+		.pl-4 {
+			padding-left: 1.4rem;
+		}
+
+		.pl-5 {
+			padding-left: 2.0rem;
+		}
+
+		.px-1 {
+			padding-left: 0.2rem;
+			padding-right: 0.2rem;
+		}
+
+		.px-2 {
+			padding-left: 0.4rem;
+			padding-right: 0.4rem;
+		}
+
+		.px-3 {
+			padding-left: 0.8rem;
+			padding-right: 0.8rem;
+		}
+
+		.px-4 {
+			padding-left: 1.4rem;
+			padding-right: 1.4rem;
+		}
+
+		.px-5 {
+			padding-left: 2.0rem;
+			padding-right: 2.0rem;
+		}
+
+		.py-1 {
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+		}
+
+		.py-2 {
+			padding-top: 0.4rem;
+			padding-bottom: 0.4rem;
+		}
+
+		.py-3 {
+			padding-top: 0.8rem;
+			padding-bottom: 0.8rem;
+		}
+
+		.py-4 {
+			padding-top: 1.4rem;
+			padding-bottom: 1.4rem;
+		}
+
+		.py-5 {
+			padding-top: 2.0rem;
+			padding-bottom: 2.0rem;
+		}
+
+		.pb-1 {
+			padding-bottom: 0.2rem;
+		}
+
+		.pb-2 {
+			padding-bottom: 0.5rem;
+		}
+
+		.pb-3 {
+			padding-bottom: 0.8rem;
+		}
+
+		.pb-4 {
+			padding-bottom: 1.2rem;
+		}
+
+		.pb-5 {
+			padding-bottom: 2.0rem;
+		}
+
+		.text-md {
+			font-size: 1.0em;
+		}
+
+		.text-sm {
+			font-size: 0.8em;
+		}
+
+		.text-tn {
+			font-size: 0.7em;
+		}
+
+		.vehicle-option {
+			display: inline-block;
+			padding: 5px 15px;
+			margin: 0 5px 8px 5px;
+			border-radius: 5px;
+			border: 1px solid #8fbc8f;
+		}
+
+		a.model-2 {
+			display: block;
+			padding: 8px 15px;
+			margin: 0 5px 12px 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			line-height: 150%;
+		}
+
+		a.model-2:hover {
+			text-decoration: none;
+		}
+
+		.text-muted {
+			color: #666;
+		}
+
+		.text-highlight {
+			color: red;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.divider {
+			border-bottom: 1px solid #ccc;
+			font-size: 1px;
+			line-height: 1px;
+		}
+
+		header#top-header {
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 60px;
+			z-index: 9999;
+			transition: all 250ms ease;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+		}
+
+		.header-logo {
+			flex: 1;
+			align-self: center;
+		}
+
+		main.main {
+			padding-top: 65px;
+			flex: 1;
+		}
+
+		#content-wrapper {
+			flex: 1;
+			display: flex;
+			width: 90%;
+			margin: auto;
+			max-width: 1100px;
+			flex-direction: column;
+			margin-top: 22px;
+		}
+
+		#footer-content-wrapper {
+			display: flex;
+			width: 90%;
+			margin: auto;
+			max-width: 1100px;
+			flex-direction: row;
+			color: #707E8C;
+			line-height: 180%;
+		}
+
+		.footer-menu {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			float: right;
+		}
+
+		@media screen and (max-width: 800px) {
+			#footer-content-wrapper {
+				display: block;
+				text-align: center;
+			}
+
+			.footer-menu {
+				float: none;
+			}
+		}
+
+		.footer-menu li {
+			display: inline;
+			padding-left: 12px;
+		}
+
+		.footer-menu li a {
+			color: #707E8C;
+		}
+
+
+		.footer-menu li:first-child:before {
+			display: none;
+		}
+
+		.breadcrumb {
+			list-style: none;
+			overflow: hidden;
+			padding: 1px 0 0 10px;
+		}
+
+		.breadcrumb li {
+			float: left;
+			margin-top: 9px;
+			margin-bottom: 2px;
+		}
+
+		.breadcrumb li a {
+			text-decoration: none;
+			color: #999;
+			border-bottom: 1px dotted #999;
+		}
+
+		.breadcrumb li:before {
+			content: "/";
+			padding: 0px 12px;
+			color: #999;
+		}
+
+		.breadcrumb li:first-child:before {
+			content: "";
+			padding-right: 0;
+			color: #999;
+		}
+
+		.adsense-large {
+			display: block;
+		}
+
+		.adsense-small {
+			display: none;
+		}
+
+		@media screen and (max-width: 768px) {
+			.xs-hidden {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 800px) {
+			body {
+				font-size: medium;
+			}
+
+			br {
+				display: none;
+				visibility: hidden;
+			}
+
+			.adsense-large {
+				display: none;
+			}
+
+			.adsense-small {
+				display: block;
+			}
+		}
+
+		header {
+			flex: 0 0 auto;
+			background-color: #fff;
+		}
+
+		footer {
+			flex: 0 0 auto;
+    		width: 100%;
+		}
+
+		.content {
+			flex: 1 1 auto;
+			position: relative;
+			overflow-y: auto;
+		}
+
+		*/ button.hamburger {
+			background-color: #fff;
+			border-color: #fff;
+			width: 60px;
+		}
+
+		button.hamburger:focus {
+			outline-style: none;
+		}
+
+		p {
+			margin: 0;
+			line-height: 180%;
+		}
+
+		.icon-menu {
+			cursor: pointer;
+			font-size: 30px;
+			color: grey;
+			align-self: center;
+			display: inline-block;
+			padding: 0 8px;
+		}
+
+		.icon-car {
+			font-size: 0.9em;
+		}
+
+		.icon-car:before {
+			content: '\e801';
+		}
+
+		.icon-cog-alt:before {
+			content: '\e802';
+		}
+
+		.icon-ok:before {
+			content: '\e804';
+		}
+
+		.icon-wrench:before {
+			content: '\e806';
+		}
+
+		.icon-menu:before {
+			content: '\f0c9';
+		}
+
+		.icon-angle-right:before {
+			content: '\f105';
+		}
+
+		.icon-code:before {
+			content: '\f121';
+		}
+
+		.icon-paper-plane:before {
+			content: '\f1d8';
+		}
+
+		.icon-paper-plane-empty:before {
+			content: '\f1d9';
+		}
+
+		.icon-calc:before {
+			content: '\f1ec';
+		}
+
+		.icon-heart:before {
+			content: '\e800';
+		}
+
+		.icon-sidebar-heading {
+			display: inline-block;
+			width: 50px;
+			text-align: center;
+		}
+
+		.icon-angle-right {
+			display: inline-block;
+			padding-left: 5px;
+			padding-right: 10px;
+		}
+
+		.icon-car {
+			position: relative;
+			left: -4px;
+		}
+
+		a.menu-item {
+			text-decoration: none;
+			display: block;
+			border-bottom: 1px solid #d3d3d3;
+			color: #2e2e2e;
+		}
+
+		.accordion header {
+			color: #2e2e2e;
+		}
+
+		header:focus {
+			outline: none;
+		}
+
+		.accordion header:hover,
+		.menu-item:hover {
+			background-color: lightblue;
+			transition: all 250ms ease;
+		}
+
+		ul.submenu {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		ul.submenu a {
+			display: block;
+			padding: 12px 0 12px 15px;
+			border-bottom: 1px solid #d3d3d3;
+			font-size: 0.85em;
+			text-decoration: none;
+			color: #555;
+		}
+
+		ul.submenu a:hover {
+			background-color: lightblue;
+		}
+
+		.horizontal-banner-small {
+			height: 100px;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			/* background-color: #051e54 */
+			background-color: #ccc;
+			width: 100%;
+		}
+
+		.horizontal-banner-large a,
+		.horizontal-banner-small a {
+			display: block;
+		}
+
+		.horizontal-banner-large {
+			display: none;
+		}
+
+		/*
+#footer-content-wrapper {
+	margin-bottom: 100px;
+}
+*/
+
+		@media screen and (min-width: 700px) {
+			.horizontal-banner-large {
+				height: 200px;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				/* background-color: #051e54; */
+				background-color: #ccc;
+				width: 100%;
+				display: block;
+			}
+
+			.horizontal-banner-small {
+				display: none;
+			}
+
+		}
+
+		.d-block {
+			display: block;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.text-left {
+			text-align: left
+		}
+
+		.bg-yellow {
+			background-color: #fafad2
+		}
+
+		.bg-red {
+			background-color: #c33;
+		}
+
+		#sidebar {
+			width: 282px;
+		}
+
+		#sidebar-logo {
+			background-image: url(image/images/download.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 90px 60px;
+			height: 60px;
+		}
+
+		.make-thumb {
+			border: 1px solid #ccc;
+			padding: 20px;
+			border-radius: 7px;
+			display: inline-block;
+			margin: 15px;
+			width: 125px;
+			height: 125px;
+		}
+
+		@media screen and (max-width: 800px) {
+			.make-thumb {
+				width: 75px;
+				height: 75px;
+				padding: 10px;
+				border-radius: 3px;
+			}
+		}
+
+		.year-thumb {
+			border: 1px solid #ccc;
+			padding: 20px;
+			border-radius: 7px;
+			display: inline-block;
+			margin: 15px;
+		}
+
+		.material-box {
+			background-color: #FFFFFF;
+			box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+			margin-bottom: 30px;
+			width: 100%;
+		}
+
+		.material-box-content {
+			max-width: 62%;
+			margin: auto;
+			padding: 20px;
+		}
+
+		.ad-box {
+			margin-bottom: 30px;
+			width: 100%;
+			text-align: center;
+		}
+
+		@media screen and (max-width: 992px) {
+			.ad-box {
+				display: none;
+			}
+		}
+
+
+		@media screen and (max-width: 900px) {
+			.material-box-content {
+				max-width: 100%;
+			}
+		}
+
+		.hide {
+			display: none;
+		}
+
+		.no-wrap {
+			white-space: nowrap;
+		}
+
+		.tire-code {
+			letter-spacing: 0.25em;
+			font-weight: bold;
+		}
+
+		.code-type,
+		.code-pax-designation {
+			color: #96C
+		}
+
+		.code-width {
+			color: #C33
+		}
+
+		.code-diameter {
+			color: #779E00
+		}
+
+		.code-aspect-ratio,
+		.code-pax-diameter {
+			color: #696
+		}
+
+		.code-construction {
+			color: #F90
+		}
+
+		.code-rim-size,
+		.code-pax-rim-size {
+			color: #03F
+		}
+
+		.code-load-range {
+			color: #B8B82E
+		}
+
+		.code-extra-mark,
+		.code-extra-mark-2 {
+			color: #B8B82E
+		}
+
+		.code-load-index {
+			color: #3CF
+		}
+
+		.code-speed-rating {
+			color: #F36
+		}
+
+		.code-speed-class {
+			color: #8B4500
+		}
+
+		.code-runflat {
+			color: #F90
+		}
+
+		.color-code-box {
+			max-width: 600px;
+			margin: auto;
+		}
+
+		.meaning {
+			text-align: center;
+			width: 70px;
+		}
+
+		.meaning {
+			padding: 8px 0;
+			text-align: center;
+			font-weight: bold;
+			color: #000;
+		}
+
+		.meaning.type,
+		.meaning.pax_designation {
+			background-color: #96C
+		}
+
+		.meaning.width {
+			background-color: #C33
+		}
+
+		.meaning.diameter {
+			background-color: #779E00
+		}
+
+		.meaning.aspect_ratio,
+		.meaning.pax_diameter {
+			background-color: #696
+		}
+
+		.meaning.construction {
+			background-color: #F90
+		}
+
+		.meaning.rim_size,
+		.meaning.pax_rim_size {
+			background-color: #03F;
+			color: #fff
+		}
+
+		.meaning.load_range {
+			background-color: #B8B82E
+		}
+
+		.meaning.extra_mark,
+		.meaning.extra_mark_2 {
+			background-color: #B8B82E
+		}
+
+		.meaning.load_index {
+			background-color: #3CF
+		}
+
+		.meaning.speed_rating {
+			background-color: #F36
+		}
+
+		.meaning.speed_class {
+			background-color: #8B4500;
+			color: #fff
+		}
+
+		.meaning.runflat {
+			background-color: #F90
+		}
+
+		.alert {
+			position: relative;
+			border: 1px solid #faebcc;
+			border-radius: 0.2em;
+			background-color: #fcf8e3;
+			color: #8a6d3b;
+		}
+
+		.ampTabContainer {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.tabButton {
+			list-style: none;
+			flex-grow: 1;
+			text-align: center;
+			cursor: pointer;
+			border: 1px solid #E6E9ED;
+			border-bottom: none;
+			width: 180px;
+			background-color: rgb(245, 247, 250);
+		}
+
+		.tabButton[selected] {
+			outline: none;
+			background: #fff;
+		}
+
+		.tabContent {
+			display: none;
+			width: 100%;
+			order: 1;
+			/* must be greater than the order of the tab buttons to flex to the next line */
+			border: 1px solid #ccc;
+		}
+
+		.tabButton[selected]+.tabContent {
+			display: block;
+		}
+
+		/* For example below (not required) */
+		.itemCustom {
+			border: 1px solid #000;
+			height: 280px;
+			width: 380px;
+			margin: 10px;
+			text-align: center;
+			padding-top: 140px;
+		}
+
+		amp-selector {
+			padding: 1rem;
+			margin: 1rem;
+		}
+
+		amp-selector [option][selected] {
+			outline: none;
+			background-color: #fff;
+		}
+
+		#by-vehicle #make,
+		#by-vehicle #model,
+		#by-vehicle #year {
+			width: 180px;
+		}
+
+		a.button {
+			-webkit-appearance: button;
+			-moz-appearance: button;
+			appearance: button;
+
+			text-decoration: none;
+			color: initial;
+		}
+
+		.d-flex {
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		.flex-wrap {
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+
+		.amazon-iframe {
+			width: 120px;
+			height: 240px;
+		}
+
+		.amazon-iframe-banner {
+			width: 300px;
+			height: 250px;
+		}
+
+		.justify-content-center {
+			justify-content: center;
+		}
+
+		.adsense {
+			margin-bottom: 30px;
+		}
+
+		.grey-border {
+			border: 1px solid #ccc;
+		}
+
+		.tire-finder-list {
+			max-width: 220px;
+			margin: auto;
+		}
+
+		.flex-1 {
+			flex: 1
+		}
+
+		.table-responsive {
+			overflow-x: auto;
+		}
+
+		.how-to-determine-rim-size {
+			max-width: 300px;
+			max-height: 152px;
+			margin: auto;
+		}
+
+		table {
+			width: 100%;
+			border-spacing: 0;
+			border: 1px solid #ddd;
+		}
+
+		caption {
+			background-color: skyblue;
+		}
+
+		.table-width-10 {
+			width: 10%;
+		}
+
+		.table-width-34 {
+			width: 34%;
+		}
+
+		.table-width-27 {
+			width: 27%;
+		}
+
+		textarea {
+			width: 100%;
+			height: 50px;
+			padding: 5px;
+		}
+
+		table.tire-size-meaning {
+			margin: auto;
+		}
+
+		td,
+		th {
+			vertical-align: middle;
+			border: 1px solid #d0d0d0;
+			line-height: 150%;
+		}
+
+	</style>
+	<style amp-boilerplate="">
+		body {
+			-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			animation: -amp-start 8s steps(1, end) 0s 1 normal both
+		}
+
+		@-webkit-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-moz-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-ms-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-o-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+	</style><noscript>
+		<style amp-boilerplate>
+			body {
+				-webkit-animation: none;
+				-moz-animation: none;
+				-ms-animation: none;
+				animation: none
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<amp-auto-ads type="adsense" data-ad-client="ca-pub-1088161031440856"></amp-auto-ads>
+	<amp-sidebar id="sidebar" layout="nodisplay" side="left"><a href="index.html">
+			<div id="sidebar-logo"></div>
+		</a>
+		<nav>
+
+			<a class="menu-item py-3 text-md" href="explanation.html"><i class="icon-code icon-sidebar-heading"
+					aria-hidden="true"></i>Tire Code
+				Explanation</a><a class="menu-item py-3 text-md" href="best-tires.html"><i
+					class="icon-heart icon-sidebar-heading" aria-hidden="true"></i>Best Tires</a><a
+				class="menu-item py-3 text-md" href="./contact.html"><i
+					class="icon-paper-plane-empty icon-sidebar-heading" aria-hidden="true"></i>Contact</a>
+		</nav>
+	</amp-sidebar>
+	<header id="top-header"><i class="icon-menu" on="tap:sidebar.toggle" role="button" tabindex="0"></i>
+		<div class="header-logo" style="
+    display: flex;
+"><a href="index.html" style="
+    width: 100px;
+">
+				<img decoding="async" alt="Size My Tires Logo" src="image/images/download.png" class="i-amphtml-fill-content i-amphtml-replaced-content" style="
+    height: 65px;
+">
+			</a></div>
+	</header>
+	<main class="main">
+		<div id="content-wrapper">
+			<div class="material-box py-4">
+				<div class="px-4">
+					<h1 class="text-center mb-1">Find Your Tire Size</h1>
+					<p class="text-center">Choose a vehicle make to get started.  <br />All makes are listed in
+						alphabetical order from A-Z.</p>
+					<div class="text-center">
+						<div class="make-thumb"><a href="./model.html">
+								<amp-img src="image/acura-logo-125.jpg" width="125" height="125"
+									alt="Acura Tire Sizes" title="Acura Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/alfa-romeo.html">
+								<amp-img src="image/alfa-romeo-logo-125.jpg" width="125" height="125"
+									alt="Alfa Romeo Tire Sizes" title="Alfa Romeo Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/am-general.html">
+								<amp-img src="image/am-general-logo-125.jpg" width="125" height="125"
+									alt="AM General Tire Sizes" title="AM General Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/american-motors.html">
+								<amp-img src="image/american-motors-logo-125.jpg" width="125" height="125"
+									alt="American Motors Tire Sizes" title="American Motors Tire Sizes"
+									layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/aston-martin.html">
+								<amp-img src="image/aston-martin-logo-125.jpg" width="125" height="125"
+									alt="Aston Martin Tire Sizes" title="Aston Martin Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/audi.html">
+								<amp-img src="image/audi-logo-125.jpg" width="125" height="125" alt="Audi Tire Sizes"
+									title="Audi Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/avanti.html">
+								<amp-img src="image/avanti-logo-125.jpg" width="125" height="125"
+									alt="Avanti Tire Sizes" title="Avanti Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/bentley.html">
+								<amp-img src="image/bentley-logo-125.jpg" width="125" height="125"
+									alt="Bentley Tire Sizes" title="Bentley Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/bertone.html">
+								<amp-img src="image/bertone-logo-125.jpg" width="125" height="125"
+									alt="Bertone Tire Sizes" title="Bertone Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/bmw.html">
+								<amp-img src="image/bmw-logo-125.jpg" width="125" height="125" alt="BMW Tire Sizes"
+									title="BMW Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/buick.html">
+								<amp-img src="image/buick-logo-125.jpg" width="125" height="125"
+									alt="Buick Tire Sizes" title="Buick Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/cadillac.html">
+								<amp-img src="image/cadillac-logo-125.jpg" width="125" height="125"
+									alt="Cadillac Tire Sizes" title="Cadillac Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/chevrolet.html">
+								<amp-img src="image/chevrolet-logo-125.jpg" width="125" height="125"
+									alt="Chevrolet Tire Sizes" title="Chevrolet Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/chrysler.html">
+								<amp-img src="image/chrysler-logo-125.jpg" width="125" height="125"
+									alt="Chrysler Tire Sizes" title="Chrysler Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/coda.html">
+								<amp-img src="image/coda-logo-125.jpg" width="125" height="125" alt="Coda Tire Sizes"
+									title="Coda Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/daewoo.html">
+								<amp-img src="image/daewoo-logo-125.jpg" width="125" height="125"
+									alt="Daewoo Tire Sizes" title="Daewoo Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/daihatsu.html">
+								<amp-img src="image/daihatsu-logo-125.jpg" width="125" height="125"
+									alt="Daihatsu Tire Sizes" title="Daihatsu Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/delorean.html">
+								<amp-img src="image/delorean-logo-125.jpg" width="125" height="125"
+									alt="DeLorean Tire Sizes" title="DeLorean Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/dodge.html">
+								<amp-img src="image/dodge-logo-125.jpg" width="125" height="125"
+									alt="Dodge Tire Sizes" title="Dodge Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/eagle.html">
+								<amp-img src="image/eagle-logo-125.jpg" width="125" height="125"
+									alt="Eagle Tire Sizes" title="Eagle Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/ferrari.html">
+								<amp-img src="image/ferrari-logo-125.jpg" width="125" height="125"
+									alt="Ferrari Tire Sizes" title="Ferrari Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/fiat.html">
+								<amp-img src="image/fiat-logo-125.jpg" width="125" height="125" alt="Fiat Tire Sizes"
+									title="Fiat Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/fisker.html">
+								<amp-img src="image/fisker-logo-125.jpg" width="125" height="125"
+									alt="Fisker Tire Sizes" title="Fisker Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/ford.html">
+								<amp-img src="image/ford-logo-125.jpg" width="125" height="125" alt="Ford Tire Sizes"
+									title="Ford Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/freightliner.html">
+								<amp-img src="image/freightliner-logo-125.jpg" width="125" height="125"
+									alt="Freightliner Tire Sizes" title="Freightliner Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/genesis.html">
+								<amp-img src="image/genesis-logo-125.jpg" width="125" height="125"
+									alt="Genesis Tire Sizes" title="Genesis Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/geo.html">
+								<amp-img src="image/geo-logo-125.jpg" width="125" height="125" alt="Geo Tire Sizes"
+									title="Geo Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/gmc.html">
+								<amp-img src="image/gmc-logo-125.jpg" width="125" height="125" alt="GMC Tire Sizes"
+									title="GMC Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/honda.html">
+								<amp-img src="image/honda-logo-125.jpg" width="125" height="125"
+									alt="Honda Tire Sizes" title="Honda Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/hummer.html">
+								<amp-img src="image/hummer-logo-125.jpg" width="125" height="125"
+									alt="Hummer Tire Sizes" title="Hummer Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/hyundai.html">
+								<amp-img src="image/hyundai-logo-125.jpg" width="125" height="125"
+									alt="Hyundai Tire Sizes" title="Hyundai Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/infiniti.html">
+								<amp-img src="image/infiniti-logo-125.jpg" width="125" height="125"
+									alt="Infiniti Tire Sizes" title="Infiniti Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/isuzu.html">
+								<amp-img src="image/isuzu-logo-125.jpg" width="125" height="125"
+									alt="Isuzu Tire Sizes" title="Isuzu Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/jaguar.html">
+								<amp-img src="image/jaguar-logo-125.jpg" width="125" height="125"
+									alt="Jaguar Tire Sizes" title="Jaguar Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/jeep.html">
+								<amp-img src="image/jeep-logo-125.jpg" width="125" height="125" alt="Jeep Tire Sizes"
+									title="Jeep Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/karma.html">
+								<amp-img src="image/karma-logo-125.jpg" width="125" height="125"
+									alt="Karma Tire Sizes" title="Karma Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/kia.html">
+								<amp-img src="image/kia-logo-125.jpg" width="125" height="125" alt="Kia Tire Sizes"
+									title="Kia Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/lamborghini.html">
+								<amp-img src="image/lamborghini-logo-125.jpg" width="125" height="125"
+									alt="Lamborghini Tire Sizes" title="Lamborghini Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/land-rover.html">
+								<amp-img src="image/land-rover-logo-125.jpg" width="125" height="125"
+									alt="Land Rover Tire Sizes" title="Land Rover Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/lexus.html">
+								<amp-img src="image/lexus-logo-125.jpg" width="125" height="125"
+									alt="Lexus Tire Sizes" title="Lexus Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/lincoln.html">
+								<amp-img src="image/lincoln-logo-125.jpg" width="125" height="125"
+									alt="Lincoln Tire Sizes" title="Lincoln Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/lotus.html">
+								<amp-img src="image/lotus-logo-125.jpg" width="125" height="125"
+									alt="Lotus Tire Sizes" title="Lotus Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/lucid.html">
+								<amp-img src="image/lucid-logo-125.jpg" width="125" height="125"
+									alt="Lucid Tire Sizes" title="Lucid Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/maserati.html">
+								<amp-img src="image/maserati-logo-125.jpg" width="125" height="125"
+									alt="Maserati Tire Sizes" title="Maserati Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/maybach.html">
+								<amp-img src="image/maybach-logo-125.jpg" width="125" height="125"
+									alt="Maybach Tire Sizes" title="Maybach Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mazda.html">
+								<amp-img src="image/mazda-logo-125.jpg" width="125" height="125"
+									alt="Mazda Tire Sizes" title="Mazda Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mclaren.html">
+								<amp-img src="image/mclaren-logo-125.jpg" width="125" height="125"
+									alt="McLaren Tire Sizes" title="McLaren Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mercedes-benz.html">
+								<amp-img src="image/mercedes-benz-logo-125.jpg" width="125" height="125"
+									alt="Mercedes-Benz Tire Sizes" title="Mercedes-Benz Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mercury.html">
+								<amp-img src="image/mercury-logo-125.jpg" width="125" height="125"
+									alt="Mercury Tire Sizes" title="Mercury Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/merkur.html">
+								<amp-img src="image/merkur-logo-125.jpg" width="125" height="125"
+									alt="Merkur Tire Sizes" title="Merkur Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mini.html">
+								<amp-img src="image/mini-logo-125.jpg" width="125" height="125" alt="Mini Tire Sizes"
+									title="Mini Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mitsubishi.html">
+								<amp-img src="image/mitsubishi-logo-125.jpg" width="125" height="125"
+									alt="Mitsubishi Tire Sizes" title="Mitsubishi Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/mobility-ventures.html">
+								<amp-img src="image/mobility-ventures-logo-125.jpg" width="125" height="125"
+									alt="Mobility Ventures Tire Sizes" title="Mobility Ventures Tire Sizes"
+									layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/nissan.html">
+								<amp-img src="image/nissan-logo-125.jpg" width="125" height="125"
+									alt="Nissan Tire Sizes" title="Nissan Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/oldsmobile.html">
+								<amp-img src="image/oldsmobile-logo-125.jpg" width="125" height="125"
+									alt="Oldsmobile Tire Sizes" title="Oldsmobile Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/panoz.html">
+								<amp-img src="image/panoz-logo-125.jpg" width="125" height="125"
+									alt="Panoz Tire Sizes" title="Panoz Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/peugeot.html">
+								<amp-img src="image/peugeot-logo-125.jpg" width="125" height="125"
+									alt="Peugeot Tire Sizes" title="Peugeot Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/pininfarina.html">
+								<amp-img src="image/pininfarina-logo-125.jpg" width="125" height="125"
+									alt="Pininfarina Tire Sizes" title="Pininfarina Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/plymouth.html">
+								<amp-img src="image/plymouth-logo-125.jpg" width="125" height="125"
+									alt="Plymouth Tire Sizes" title="Plymouth Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/polestar.html">
+								<amp-img src="image/polestar-logo-125.jpg" width="125" height="125"
+									alt="Polestar Tire Sizes" title="Polestar Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/pontiac.html">
+								<amp-img src="image/pontiac-logo-125.jpg" width="125" height="125"
+									alt="Pontiac Tire Sizes" title="Pontiac Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/porsche.html">
+								<amp-img src="image/porsche-logo-125.jpg" width="125" height="125"
+									alt="Porsche Tire Sizes" title="Porsche Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/ram.html">
+								<amp-img src="image/ram-logo-125.jpg" width="125" height="125" alt="RAM Tire Sizes"
+									title="RAM Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/renault.html">
+								<amp-img src="image/renault-logo-125.jpg" width="125" height="125"
+									alt="Renault Tire Sizes" title="Renault Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/rivian.html">
+								<amp-img src="image/rivian-logo-125.jpg" width="125" height="125"
+									alt="Rivian Tire Sizes" title="Rivian Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/rolls-royce.html">
+								<amp-img src="image/rolls-royce-logo-125.jpg" width="125" height="125"
+									alt="Rolls-Royce Tire Sizes" title="Rolls-Royce Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/saab.html">
+								<amp-img src="image/saab-logo-125.jpg" width="125" height="125" alt="Saab Tire Sizes"
+									title="Saab Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/saturn.html">
+								<amp-img src="image/saturn-logo-125.jpg" width="125" height="125"
+									alt="Saturn Tire Sizes" title="Saturn Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/scion.html">
+								<amp-img src="image/scion-logo-125.jpg" width="125" height="125"
+									alt="Scion Tire Sizes" title="Scion Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/smart.html">
+								<amp-img src="image/smart-logo-125.jpg" width="125" height="125"
+									alt="Smart Tire Sizes" title="Smart Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/srt.html">
+								<amp-img src="image/srt-logo-125.jpg" width="125" height="125" alt="SRT Tire Sizes"
+									title="SRT Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/sterling.html">
+								<amp-img src="image/sterling-logo-125.jpg" width="125" height="125"
+									alt="Sterling Tire Sizes" title="Sterling Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/subaru.html">
+								<amp-img src="image/subaru-logo-125.jpg" width="125" height="125"
+									alt="Subaru Tire Sizes" title="Subaru Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/suzuki.html">
+								<amp-img src="image/suzuki-logo-125.jpg" width="125" height="125"
+									alt="Suzuki Tire Sizes" title="Suzuki Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/tesla.html">
+								<amp-img src="image/tesla-logo-125.jpg" width="125" height="125"
+									alt="Tesla Tire Sizes" title="Tesla Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/toyota.html">
+								<amp-img src="image/toyota-logo-125.jpg" width="125" height="125"
+									alt="Toyota Tire Sizes" title="Toyota Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/volkswagen.html">
+								<amp-img src="image/volkswagen-logo-125.jpg" width="125" height="125"
+									alt="Volkswagen Tire Sizes" title="Volkswagen Tire Sizes" layout="responsive">
+								</amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/volvo.html">
+								<amp-img src="image/volvo-logo-125.jpg" width="125" height="125"
+									alt="Volvo Tire Sizes" title="Volvo Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/vpg.html">
+								<amp-img src="image/vpg-logo-125.jpg" width="125" height="125" alt="VPG Tire Sizes"
+									title="VPG Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="make-thumb"><a href="make/yugo.html">
+								<amp-img src="image/yugo-logo-125.jpg" width="125" height="125" alt="Yugo Tire Sizes"
+									title="Yugo Tire Sizes" layout="responsive"></amp-img>
+							</a></div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="text-tn pb-5" id="footer-content-wrapper">
+			<div class="px-2 pb-3">© 2022 Findanytire. &nbsp;All rights reserved.</div>
+			<div class="flex-1 px-2 pb-3">
+				<ul class="footer-menu">
+					<li><a href="/">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Advertise</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>		
+	</footer>
+
+</body>
+
+
+</html>

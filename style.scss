@@ -1,0 +1,252 @@
+@mixin input {
+    input {
+      width: 100%;
+      border-radius: 0px !important;
+      line-height: 1.2;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      height: 2.7em;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+  }
+  
+  /* Breakpoints
+  ----------------*/
+  $size-medium: 769px;
+  $size-small: 35.5em;
+  $size-large: 64em;
+  
+  @mixin bp-large($size-large) {
+    @media only screen and (max-width: $size-large) {
+      @content;
+    }
+  }
+  
+  @mixin bp-medium($size-medium) {
+    @media only screen and (max-width: $size-medium) {
+      @content;
+    }
+  }
+  
+  @mixin bp-small($size-small) {
+    @media only screen and (max-width: $size-small) {
+      @content;
+    }
+  }
+  
+  /* border-box
+  ---------------*/
+  
+  @mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin:0;
+    padding:0;
+    height:100%;
+    width: 100%;
+    @include border-box
+  }
+  
+  //PureCSS Grids
+  /* fix for IE and Firefox responsiveness */
+  .pure-g {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  .pure-g > div[class*="pure-u-"] {
+    padding: 0em; //Add gutters to grid columns
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /* Adds gutters to the form with purecss grids
+  -------------------------*/
+  form {
+    .pure-g > div
+    {
+      box-sizing: border-box;
+    }
+    .pure-g > div:first-child
+    {
+      padding-right: 3%;
+    }
+    .pure-g > div:last-child
+    {
+      padding-left: 3%;
+    }
+    .pure-g > div :not(:first-child):not(:last-child)
+    {
+      padding: 0 3%;
+    }
+    @include bp-medium($size-medium) {
+      .pure-g > div
+      {
+        box-sizing: border-box;
+      }
+      .pure-g > div:first-child
+      {
+        padding-right: 0;
+      }
+      .pure-g > div:last-child
+      {
+        padding-left: 0;
+      }
+      .pure-g > div :not(:first-child):not(:last-child)
+      {
+        padding: 0;
+      }
+    }
+  }
+  
+  /*  Colors
+  -------------*/
+  
+  $dark-blue: #0F2446;
+  $light-blue: #00AEF3;
+  $gray: #F6F6F6;
+  $white: #fff;
+  $red: #E31818;
+  $yellow: #FFDD00;
+  
+  /*form styles*/
+  
+  #msform {
+    width: 100%;
+    margin: 5% auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  #msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: relative;
+  }
+  
+  
+  /*Hide all except first fieldset*/
+  
+  #msform fieldset:not(:first-of-type) {
+    display: none;
+  }
+  
+  
+  /*inputs*/
+  
+  #msform input,
+  #msform textarea {
+    padding: 2%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 13px;
+  }
+  
+  
+  /*buttons*/
+  
+  #msform .action-button {
+    width: 100px;
+    background: $light-blue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+  }
+  
+  
+  /*headings*/
+  
+  .fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+  }
+  
+  
+  /*progressbar*/
+  
+  #progressbar {
+    margin-bottom: 3%;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+  }
+  
+  #progressbar li {
+    list-style-type: none;
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 25%;
+    float: left;
+    position: relative;
+  }
+  
+  #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: $gray;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+  }
+  
+  
+  /*progressbar connectors*/
+  
+  #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: $gray;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    /*put it behind the numbers*/
+  }
+  
+  #progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+  }
+  
+  
+  /*marking active/completed steps green*/
+  
+  
+  /*The number of the step and the connector before it = green*/
+  
+  #progressbar li.active:before,
+  #progressbar li.active:after {
+    background: $light-blue;
+    color: white;
+  }

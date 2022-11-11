@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<meta charset="utf-8" />
+	<title>Tire</title>
+	<script async="" src="../js/v0.js"></script>
+	<script async="" custom-element="amp-sidebar" src="../js/v0/amp-sidebar-0.1.js"></script>
+	<link rel="canonical" href="index.html" />
+	<link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="style.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/materia/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
+	<meta name="viewport"
+		content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="description"
+		content="Find your tire size faster than anywhere else on the net. Size My Tires is optimized for speed so you can find your vehicle tire size in seconds." />
+	<meta name="keywords" content="size my tires, tire size, find my tire size, find your tire size" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<style>
+		.container { margin: 70px 0  30px 0; }
+			  div[data-acc-content] { display: none;  }
+			  div[data-acc-step]:not(.open) { background: #f2f2f2;  }
+			  div[data-acc-step]:not(.open) h5 { color: #777;  }
+			  div[data-acc-step]:not(.open) .badge-primary { background: #ccc;  }
+	</style>
+</head>
+
+<body class="amp-mode-mouse" style="opacity: 1; visibility: visible; animation: 0s ease 0s 1 normal none running none;">
+	<amp-auto-ads type="adsense" data-ad-client="ca-pub-1088161031440856" class="i-amphtml-element i-amphtml-layout-container i-amphtml-built i-amphtml-layout" i-amphtml-layout="container"></amp-auto-ads>
+	<amp-sidebar id="sidebar" layout="nodisplay" side="left" class="i-amphtml-element i-amphtml-layout-nodisplay i-amphtml-overlay i-amphtml-scrollable i-amphtml-built" hidden="" i-amphtml-layout="nodisplay" role="menu" tabindex="-1"><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><a href="index.html">
+			<div id="sidebar-logo"></div>
+		</a>
+		<nav>
+			<a class="menu-item py-3 text-md" href="explanation.html"><i class="icon-code icon-sidebar-heading" aria-hidden="true"></i>Tire Code
+				Explanation</a><a class="menu-item py-3 text-md" href="best-tires.html"><i class="icon-heart icon-sidebar-heading" aria-hidden="true"></i>Best Tires</a><a class="menu-item py-3 text-md" href="contact.html"><i class="icon-paper-plane-empty icon-sidebar-heading" aria-hidden="true"></i>Contact</a>
+		</nav>
+	<button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button><button class="i-amphtml-screen-reader" tabindex="-1">Close the sidebar</button></amp-sidebar>
+	<header id="top-header"><i class="icon-menu" on="tap:sidebar.toggle" role="button" tabindex="0"></i>
+		<div class="header-logo" style="
+    display: flex;
+"><a href="index.html" style="
+    width: 100px;
+">
+				<img decoding="async" alt="Size My Tires Logo" src="../image/images/download.png" class="i-amphtml-fill-content i-amphtml-replaced-content" style="
+    height: 65px;
+">
+			</a></div>
+	</header>
+    <form class="pure-form pure-form-stacked" id="msform">
+        <ul id="progressbar">
+			<li class="active" onclick="window.location.href = './model.html';">MODEL</li>
+			<li class="active" onclick="window.location.href = './year.html';">YEAR</li>
+			<li >TYPE</li>
+			<li >SIZE</li>
+		  </ul>
+        <fieldset style="left: 0%; opacity: 1; display: block;">
+			<h2 class="fs-title">YEAR</h2>
+            <div class="pure-g" style="
+    margin: 5% 0 2% 0;
+">
+            <div class="pure-u-1">
+              <!-- <label for="state">MODELS</label> -->
+			  <select id="mySelect" style="
+			  border: navajowhite;
+			  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+			  font-size: 20px;
+			  width: 250px;
+			  padding: 10px;
+			  border-radius: 5px;
+		  ">
+						  <option value="0">Select</option>
+						  <option value="1"> 2000</option>
+						  <option value="2">2001</option>
+						  <option value="3">2002</option>
+						  <option value="4">2003</option>
+						</select>
+            </div>
+            </div>
+			<div class="f-btn" style="
+			display: flex;
+			justify-content: center;
+		">
+		<button class="action-button"><a href="./model.html">Previous</a></button>
+		<a href="javascript:;" id="mySubmit" class="action-button">Next</a>
+		  </div>		
+        </fieldset>
+      </form>
+	  <div class="mobbox-content">
+		<div class="container">
+		  <form id="form">
+			  <div class="list-group">
+		
+				<div class="list-group-item py-3" data-acc-step>
+				<h5 class="mb-0" data-acc-title>Model</h5>
+				<div data-acc-content>
+					<div class="pure-g" style="
+					margin: 5% 0 7% 0;
+				">
+					<div class="pure-u-1">
+						<!-- <label for="state">MODELS</label> -->
+						<select id="mySelect" style="
+						border: navajowhite;
+						box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+						font-size: 16px;
+						width: 250px;
+						padding: 10px;
+						border-radius: 5px;
+					">
+							<option value="0">Select</option>
+							<option value="1"> MODEL 1</option>
+							<option value="2">MODEL 2</option>
+							<option value="3">MODEL 3</option>
+							<option value="4">MODEL 4</option>
+							</select>
+					</div>
+							</div>
+				</div>
+				</div>
+		
+				<div class="list-group-item py-3" data-acc-step>
+				<h5 class="mb-0" data-acc-title>Year</h5>
+				<div data-acc-content>
+					<div class="pure-g" style="
+					margin: 5% 0 7% 0;
+				">
+							<div class="pure-u-1">
+							  <!-- <label for="state">MODELS</label> -->
+							  <select id="mySelect" style="
+							  border: navajowhite;
+							  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+							  font-size: 16px;
+							  width: 250px;
+							  padding: 10px;
+							  border-radius: 5px;
+							 ">
+										  <option value="0">Select</option>
+										  <option value="1"> 2000</option>
+										  <option value="2">2001</option>
+										  <option value="3">2002</option>
+										  <option value="4">2003</option>
+										</select>
+							</div>
+							</div>
+				</div>
+				</div>
+
+				<div class="list-group-item py-3" data-acc-step>
+					<h5 class="mb-0" data-acc-title>Type</h5>
+					<div data-acc-content>
+						<div class="pure-g" style="
+						margin: 5% 0 7% 0;
+					">
+								<div class="pure-u-1">
+								  <!-- <label for="state">MODELS</label> -->
+								  <select id="mySelect" style="
+								  border: navajowhite;
+								  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+								  font-size: 16px;
+								  width: 250px;
+								  padding: 10px;
+								  border-radius: 5px;
+								 ">
+											  <option value="0">Select</option>
+											  <option value="1"> 2000</option>
+											  <option value="2">2001</option>
+											  <option value="3">2002</option>
+											  <option value="4">2003</option>
+											</select>
+								</div>
+								</div>
+					</div>
+					</div>
+		
+				<div class="list-group-item py-3" data-acc-step>
+				<h5 class="mb-0" data-acc-title>Final Result</h5>
+				<div data-acc-content>
+					<div class="pure-g final">
+						<img src="../image/images/tire.jpg" alt="tire_image" style="
+					margin: 0;
+				">
+						<table style="width:100%;border-collapse: collapse;">
+					<tbody>
+					  <tr>
+						<td style="
+						padding: 5px;
+						width: 15%;
+					">Tire Name</td>
+						<td style="
+					  padding: 5px;
+				  ">Abc</td>
+							  </tr>
+							  <tr>
+								<td style="
+					  padding: 5px;
+				  ">details</td>
+								<td style="
+					  padding: 5px;
+				  ">235/60R16 100H</td>
+							  </tr>
+							  <tr>
+								<td style="
+					  padding: 5px;
+				  ">Simplified Size</td>
+								<td style="
+					  padding: 5px;
+				  ">235-60-16</td>
+					  </tr>
+					</tbody>
+				  </table>
+				  <div class="f-btn" style="
+					display: flex;
+						  justify-content: center;
+					  ">
+						  <div class="action-button" style="
+					text-align: center;
+				"><a href="./type.html">Previous</a></div>
+						  <div class="action-button" style="
+					text-align: center;
+				"><a href="./model.html">Reset</a></div>
+						</div>
+					  </div>
+				</div>
+				</div>
+		
+			  </div>
+			  </form>
+		</div>
+	  </div>
+	<footer>
+		<div class="text-tn pb-5" id="footer-content-wrapper">
+			<div class="px-2 pb-3">© 2022 Findanytire. &nbsp;All rights reserved.</div>
+			<div class="flex-1 px-2 pb-3">
+				<ul class="footer-menu">
+					<li><a href="/">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Advertise</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>		
+	</footer>
+
+      <script>
+$(document).ready(function () {
+  $('#mySelect').val("0");
+  
+  $('#mySelect').change(function () {
+    selectVal = $('#mySelect').val();
+   
+    if (selectVal == 0) {
+       $('#mySubmit').attr("href", "javascript:;");
+    }
+    else {
+      $('#mySubmit').attr("href", "./type.html");
+    }
+  })  
+});
+
+        //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+    
+    $(".next").click(function() {
+      if (animating) return false;
+      animating = true;
+    
+      current_fs = $(this).parent();
+      next_fs = $(this).parent().next();
+    
+      //activate next step on progressbar using the index of next_fs
+      $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+    
+      //show the next fieldset
+      next_fs.show();
+      //hide the current fieldset with style
+      current_fs.animate({
+        opacity: 0
+      }, {
+        step: function(now, mx) {
+          //as the opacity of current_fs reduces to 0 - stored in "now"
+          //1. scale current_fs down to 80%
+          scale = 1 - (1 - now) * 0.2;
+          //2. bring next_fs from the right(50%)
+          left = (now * 50) + "%";
+          //3. increase opacity of next_fs to 1 as it moves in
+          opacity = 1 - now;
+          current_fs.css({
+            'transform': 'scale(' + scale + ')',
+            'position': 'absolute'
+          });
+          next_fs.css({
+            'left': left,
+            'opacity': opacity
+          });
+        },
+        duration: 800,
+        complete: function() {
+          current_fs.hide();
+          animating = false;
+        },
+        //this comes from the custom easing plugin
+        easing: 'easeInOutBack'
+      });
+    });
+    
+    $(".previous").click(function() {
+      if (animating) return false;
+      animating = true;
+    
+      current_fs = $(this).parent();
+      previous_fs = $(this).parent().prev();
+    
+      //de-activate current step on progressbar
+      $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+    
+      //show the previous fieldset
+      previous_fs.show();
+      //hide the current fieldset with style
+      current_fs.animate({
+        opacity: 0
+      }, {
+        step: function(now, mx) {
+          //as the opacity of current_fs reduces to 0 - stored in "now"
+          //1. scale previous_fs from 80% to 100%
+          scale = 0.8 + (1 - now) * 0.2;
+          //2. take current_fs to the right(50%) - from 0%
+          left = ((1 - now) * 50) + "%";
+          //3. increase opacity of previous_fs to 1 as it moves in
+          opacity = 1 - now;
+          current_fs.css({
+            'left': left
+          });
+          previous_fs.css({
+            'transform': 'scale(' + scale + ')',
+            'opacity': opacity
+          });
+        },
+        duration: 800,
+        complete: function() {
+          current_fs.hide();
+          animating = false;
+        },
+        //this comes from the custom easing plugin
+        easing: 'easeInOutBack'
+      });
+    });
+    
+    $(".submit").click(function() {
+      return false;
+    })
+
+
+	var options = {
+        mode: 'wizard',
+        autoButtonsNextClass: 'btn btn-primary float-right',
+        autoButtonsPrevClass: 'btn btn-light',
+        stepNumberClass: 'badge badge-pill badge-primary mr-1',
+        onSubmit: function() {
+          alert('Form submitted!');
+          return true;
+        }
+      }
+
+      $( function() {
+
+        $( "#form" ).accWizard(options);
+
+      });
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+      </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="dist/jquery.accordion-wizard.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;900&display=swap");
+:root {
+  --primary: #191919;
+  --secondary: #f26db6;
+  --ternary: #310273;
+  --background: #f1f1f1;
+  --gray: #e1eeff7f;
+  --white: #fff;
+}
+
+body {
+  color: var(--font-color);
+  font-family: "Inter", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-content-colapse[kann]{
+  margin-top: 30%;
+}
+
+
+.caption {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ec1c24;
+}
+
+.title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #ec1c24;
+}
+
+.faq {
+  max-width: 800px;
+  margin: auto;
+}
+
+.box-content-colapse {
+  width: 90%;
+  height: auto;
+  position: relative;
+}
+
+.intro-colapse {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-comp {
+  cursor: pointer;
+  width: calc(100% - 32px);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  position: relative;
+  left: 0px;
+  background: white;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .details-comp {
+      cursor: pointer;
+      width: calc(100% - 32px);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+      position: relative;
+      width: 100%;
+  }
+
+  #msform{
+    display: none;
+  }
+
+  .box-content-colapse {
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.mobbox-content {
+  width: 100%;
+  display: block!important;
+}
+.mobbox-content #state{margin: 10% 0;}
+
+  }
+
+.details-comp > p {
+  padding: 0 16px;
+}
+
+.summary-colapse {
+  list-style: none;
+  border-radius: 8px;
+  padding-left: 16px;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.summary-colapse::-webkit-details-marker {
+  display: none;
+}
+
+.details-comp[open] > .summary-colapse::after {
+  display: flex;
+  justify-content: space-between;
+  content: url("https://cdn-icons-png.flaticon.com/24/7153/7153564.png");
+  font-size: 16px;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.details-comp > .summary-colapse::after {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  content: url("https://cdn-icons-png.flaticon.com/24/7153/7153566.png");
+  font-size: 16px;
+  padding-right: 24px;
+}
+
+.details-comp[open] p {
+  -webkit-animation: details-show 350ms linear;
+          animation: details-show 350ms linear;
+}
+
+.mobbox-content {
+  width: 100%;
+  display: none;
+}
+
+.details-comp:not([open]) p {
+  opacity: 0;
+}
+
+@-webkit-keyframes details-show {
+  0% {
+    opacity: 0;
+    transform: translatey(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+@keyframes details-show {
+  0% {
+    opacity: 0;
+    transform: translatey(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}/*# sourceMappingURL=mobile.css.map */
